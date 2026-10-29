@@ -275,7 +275,7 @@ function render(){
 }
 
 function ring(){ return `<span class="ring"><svg class="o" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="11"/></svg><span class="fill"></span><span class="tick"><svg viewBox="0 0 26 26" width="26" height="26"><path d="M8 13.5l3.3 3.2L18 10"/></svg></span></span>`; }
-function scoops(){ const c=["","#FFF4B8","#FFFFFF","#FFDF5E","#FFFFFF"]; return `<div class="scoops">${[[-30,-30,120],[260,-20,90],[300,150,130],[-40,170,100],[150,230,70]].map((p,i)=>`<span style="left:${p[0]}px;top:${p[1]}px;width:${p[2]}px;height:${p[2]}px;background:${c[i]}"></span>`).join("")}</div>`; }
+function scoops(){ const c=["#FFFFFF","#FFF4B8","#FFFFFF","#FFDF5E","#FFFFFF"]; return `<div class="scoops">${[[-30,-30,120],[260,-20,90],[300,150,130],[-40,170,100],[150,230,70]].map((p,i)=>`<span style="left:${p[0]}px;top:${p[1]}px;width:${p[2]}px;height:${p[2]}px;background:${c[i]}"></span>`).join("")}</div>`; }
 
 function wire(s){
   if (s.t === "about") {
@@ -349,7 +349,7 @@ function hideSheet(){ sheet.className = "sheet"; }
 function pick(a){ return a[Math.floor(Math.random()*a.length)]; }
 function burst(n){
   const c = document.createElement("div"); c.className = "confetti"; document.body.appendChild(c);
-  const col = ["","#F6CF2C","#FFF4B8","#FAD4CF","#D8E6FA","#D3F0EC","#FFE3CC","#EBDDF7"];
+  const col = ["#141414","#F6CF2C","#FFF4B8","#FAD4CF","#D8E6FA","#D3F0EC","#FFE3CC","#EBDDF7"];
   for (let i=0;i<n;i++){ const e=document.createElement("i"); e.style.left=Math.random()*100+"%"; e.style.background=col[i%col.length]; e.style.animationDuration=(1.4+Math.random()*1.4)+"s"; e.style.animationDelay=Math.random()*.3+"s"; c.appendChild(e); }
   setTimeout(()=>c.remove(), 3500);
 }
