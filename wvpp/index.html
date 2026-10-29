@@ -37,6 +37,7 @@ h2{font-size:26px;line-height:1.15;margin:6px 0 18px}
 .pts{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
 .pts li{display:flex;gap:12px;align-items:flex-start}
 .pts li b{color:var(--ink)}
+.pip{flex:none;width:9px;height:9px;border-radius:50%;background:var(--yel);margin:8px 8px 0 9px}
 .dot{flex:none;width:26px;height:26px;border-radius:50%;background:var(--tint,var(--green-soft));display:grid;place-items:center;font-size:14px;margin-top:1px}
 .q{font-family:"DM Sans",system-ui,sans-serif;font-weight:700;letter-spacing:-.01em;font-size:24px;line-height:1.2;color:var(--ink);margin:10px 0 20px}
 .opts{display:flex;flex-direction:column;gap:12px}
@@ -135,66 +136,66 @@ const LOGO = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbM
 const STEPS = [
   {t:"welcome"},
   {t:"about"},
-  {t:"lesson", tint:"var(--yellow)", icon:"📘", tag:"Our plan", title:"Bobboi has a plan to keep you safe",
+  {t:"lesson", tint:"var(--yellow)", tag:"Our plan", title:"Our Workplace Violence Prevention Plan",
    intro:"It's designed for the risks of a gelato shop open to the public, and it follows California law.",
-   pts:[["📍","Read it at <b>bobboi.com/bobboistaffresources</b>. A printed copy is in every shop and at the production facility."],
-        ["🚫","<b>Zero tolerance:</b> no violence or threat of violence. Firearms and other weapons are not allowed at work."],
-        ["🧑‍💼","<b>Management</b> trains employees and handles every report promptly."],
-        ["🙋","<b>You</b> follow the safety procedures, report anything suspicious and take part in training."],
-        ["👥","Responsible: the CEO and HR Manager, the store manager of each shop, the Head of Production. Names and contacts are in the plan."]]},
+   pts:[["","Read it at <b>bobboi.com/bobboistaffresources</b>. A printed copy is in every shop and at the production facility."],
+        ["","<b>Zero tolerance:</b> no violence or threat of violence. Firearms and other weapons are not allowed at work."],
+        ["","<b>Management</b> trains employees and handles every report promptly."],
+        ["","<b>You</b> follow the safety procedures, report anything suspicious and take part in training."],
+        ["","Responsible: the CEO and HR Manager, the store manager of each shop, the Head of Production. Names and contacts are in the plan."]]},
   {t:"q", tint:"var(--yellow)", q:"Where can you find the Workplace Violence Prevention Plan?",
    o:["Only in the office, by asking a manager","Online at bobboi.com/bobboistaffresources and printed in every shop","Only in the employee handbook","It's only explained during training"], a:1,
    f:"The plan is online and printed in every shop and at the production facility."},
-  {t:"lesson", tint:"var(--sky)", icon:"🔎", tag:"What it is", title:"The four types of workplace violence",
+  {t:"lesson", tint:"var(--sky)", tag:"What it is", title:"Types of workplace violence",
    intro:"California law defines four types:",
    pts:[["1","<b>Type 1:</b> someone with no business at the shop who comes to commit a crime, like a robbery."],
         ["2","<b>Type 2:</b> violence by customers or visitors."],
         ["3","<b>Type 3:</b> violence by a present or former employee, supervisor or manager."],
         ["4","<b>Type 4:</b> violence by someone with a personal relationship, past or present, with an employee."]],
-   outro:"It includes physical attacks, with or without a weapon, threats, and sexual assault or threats."},
+   outro:"It includes physical attacks with or without a weapon, threats of violence, and sexual assault or threats of sexual assault."},
   {t:"q", tint:"var(--sky)", q:"A coworker's ex-partner comes to the shop and threatens them. Which type is it?",
-   o:["Type 1","Type 2","Type 3","Type 4"], a:3,
+   o:["","Type 2","Type 3","Type 4"], a:3,
    f:"Type 4 is violence by someone who has, or had, a personal relationship with an employee."},
-  {t:"lesson", tint:"var(--mint)", icon:"🛡️", tag:"Prevention", title:"How we prevent it",
-   pts:[["💡","<b>The shop:</b> good lighting, cameras at entrances, exits and cash areas, a phone for emergencies, clear escape routes."],
-        ["🔑","<b>Access:</b> only authorized staff in cash areas. Contractors and delivery people are checked first."],
-        ["💵","<b>Cash:</b> little on hand, frequent deposits, drop-safes employees can't open."],
-        ["⚠️","<b>Warning signs:</b> threats, verbal abuse or property damage can come before violence. Report them."],
-        ["🔧","<b>Hazards are fixed promptly.</b> If it can't be fixed safely, you're moved away from it."]]},
+  {t:"lesson", tint:"var(--mint)", tag:"Prevention", title:"Prevention measures",
+   pts:[["","<b>The shop:</b> good lighting, cameras at entrances, exits and cash areas, a phone for emergencies, clear escape routes."],
+        ["","<b>Access:</b> only authorized staff in cash areas. Contractors and delivery people are checked first."],
+        ["","<b>Cash:</b> little on hand, frequent deposits, drop-safes employees can't open."],
+        ["","<b>Warning signs:</b> threats, verbal abuse or property damage can come before violence. Report them."],
+        ["","<b>Hazards are fixed promptly.</b> If it can't be fixed safely, you're moved away from it."]]},
   {t:"q", tint:"var(--mint)", q:"A customer who argued with you yesterday waits outside the shop for a long time, watching you. What do you do?",
    o:["Nothing, they haven't done anything","Go outside and ask them to leave","Report it to the supervisor on shift or, if you're alone, to your manager","Wait until the end of your shift and see"], a:2,
    f:"Strange behavior can come before violence. Report it, even if nothing has happened yet."},
-  {t:"lesson", tint:"var(--red-soft)", icon:"🚨", tag:"Emergency", title:"If there's immediate danger",
-   pts:[["✋","Don't confront anyone."],["🏃","Get away, or find a safe place to shelter."],["📞","Call <b>911</b>."],["💬","Tell your supervisor as soon as you can."]],
+  {t:"lesson", tint:"var(--red-soft)", tag:"Emergency", title:"If there's immediate danger",
+   pts:[["","Don't confront anyone."],["","Get away, or find a safe place to shelter."],["","Call <b>911</b>."],["","Tell your supervisor as soon as you can."]],
    outro:"In an emergency you can always use your phone to call for help or let someone know you're OK."},
-  {t:"lesson", tint:"var(--red-soft)", icon:"🔐", tag:"Emergency", title:"During a robbery",
-   pts:[["❤️","<b>Your safety comes first:</b> do what the robber asks."],["🚫","Don't try to catch or confront the robber."],["🔴","Press the panic button <b>only if you can do it safely</b>."],["👀","Remember details (appearance, clothes, vehicle) without risk."],["📞","Call 911 when it's safe, then secure the shop and don't touch anything."],["📝","Write down what happened and tell your supervisor."]]},
+  {t:"lesson", tint:"var(--red-soft)", tag:"Emergency", title:"During a robbery",
+   pts:[["","<b>Your safety comes first:</b> do what the robber asks."],["","Don't try to catch or confront the robber."],["","Press the panic button <b>only if you can do it safely</b>."],["","Remember details (appearance, clothes, vehicle) without risk."],["","Call 911 when it's safe, then secure the shop and don't touch anything."],["","Write down what happened and tell your supervisor."]]},
   {t:"q", tint:"var(--red-soft)", q:"During a robbery, what comes first?",
    o:["Protecting the money in the register","Your personal safety","Getting a photo of the robber","Calling your manager"], a:1,
    f:"Do what the robber asks and don't confront them: your safety comes first."},
   {t:"q", tint:"var(--red-soft)", q:"When should you press the panic button during a robbery?",
    o:["Right away, in front of the robber","Never","Only if you can do it safely","Only after the robber has left"], a:2,
    f:"Press it only if you can do it without putting yourself at risk."},
-  {t:"lesson", tint:"var(--lav)", icon:"📣", tag:"Reporting", title:"How to report",
-   pts:[["🗣️","Report any incident, threat or concern <b>right away</b> to your supervisor or to the people responsible for the plan."],
-        ["✉️","Or <b>anonymously</b> by mail: Bobboi Natural Gelato, 8008 Girard Avenue, La Jolla, CA 92037."],
-        ["🤝","<b>No retaliation</b> for reporting to Bobboi or to the police. Reports are confidential."],
-        ["✅","Every concern is investigated, and you'll be told the results."]]},
+  {t:"lesson", tint:"var(--lav)", tag:"Reporting", title:"How to report",
+   pts:[["","Report any incident, threat or concern <b>right away</b> to your supervisor or to the people responsible for the plan."],
+        ["","Or <b>anonymously</b> by mail: Bobboi Natural Gelato, 8008 Girard Avenue, La Jolla, CA 92037."],
+        ["","<b>No retaliation</b> for reporting to Bobboi or to the police. Reports are confidential."],
+        ["","Every concern is investigated, and you'll be told the results."]]},
   {t:"q", tint:"var(--lav)", q:"A coworker made a threat to you last week, but nothing else happened. What do you do?",
    o:["Nothing, only physical violence must be reported","Wait and see if it happens again","Report it to your supervisor or to the people responsible for the plan","Talk about it only with other coworkers"], a:2,
    f:"Threats are workplace violence too, and every concern should be reported."},
   {t:"q", tint:"var(--lav)", q:"Can you be punished for reporting an incident to the police?",
    o:["Yes, if you didn't tell your manager first","No, you can report without fear of retaliation","Only if the report turns out to be wrong","Yes, if it damages the company's image"], a:1,
    f:"The plan protects you from any retaliation for reporting to Bobboi or to the police."},
-  {t:"lesson", tint:"var(--peach)", icon:"🩹", tag:"After an incident", title:"What happens next",
-   pts:[["🫂","<b>Support</b> for the people involved, including counseling if needed."],["🔍","<b>Investigation:</b> scene, witnesses, camera footage, cause, corrective actions."],["📒","Every incident goes in the <b>Violent Incident Log</b>, with no names or personal information."],["📂","The plan, the log and training records are available to you on request."],["🏥","Serious injuries are reported to Cal/OSHA."]]},
+  {t:"lesson", tint:"var(--peach)", tag:"After an incident", title:"What happens next",
+   pts:[["","<b>Support:</b> we support everyone involved."],["","<b>Investigation:</b> we look into what happened (the scene, witnesses and camera footage), find the cause and take corrective action."],["","Every incident goes in the <b>Violent Incident Log</b>, with no names or personal information."],["","The plan, the log and training records are available to you on request."],["","Serious injuries are reported to Cal/OSHA."]]},
   {t:"q", tint:"var(--peach)", q:"Which of these is NOT written in the Violent Incident Log?",
    o:["Date and time of the incident","The type of violence","The names of the people involved","What happened after the incident"], a:2,
    f:"The log never contains names or other personal information."},
-  {t:"lesson", tint:"var(--rose)", icon:"🍦", tag:"Your role", title:"You're part of the plan",
-   pts:[["👂","Tell us what feels unsafe in your shop."],["✏️","You can help design the training and review the plan."],["🔄","The plan is reviewed every year, after every incident and whenever a problem is found."],["📅","Training happens every year. Not following the plan can lead to disciplinary action."]]},
-  {t:"lesson", sup:true, tint:"var(--green-soft)", icon:"⭐", tag:"Supervisors", title:"Your extra responsibilities",
-   pts:[["🏪","Put the plan into practice at your location and make sure your team is trained."],["⚡","Handle every report promptly and protect the person who reports."],["🔍","After an incident: visit the scene when safe, talk to people and witnesses, review footage, fix the cause."],["📒","Make sure it's in the Violent Incident Log, without names, and that people get support."],["🔧","Report hazards you can't fix yourself: a broken light, a lock, a phone."]]},
+  {t:"lesson", tint:"var(--rose)", tag:"Your role", title:"You're part of the plan",
+   pts:[["","Tell us what feels unsafe in your shop."],["","You can help design the training and review the plan."],["","The plan is reviewed every year, after every incident and whenever a problem is found."],["","Training happens every year. Not following the plan can lead to disciplinary action."]]},
+  {t:"lesson", sup:true, tint:"var(--green-soft)", tag:"Supervisors", title:"Your extra responsibilities",
+   pts:[["","Put the plan into practice at your location and make sure your team is trained."],["","Handle every report promptly and protect the person who reports."],["","After an incident: visit the scene when safe, talk to people and witnesses, review footage, fix the cause."],["","Make sure the incident is recorded in the Violent Incident Log, without names, and that the people involved get support."],["","Report hazards you can't fix yourself: a broken light, a lock, a phone."]]},
   {t:"q", sup:true, tint:"var(--green-soft)", q:"A team member tells you a customer threatened them yesterday, but they're fine now. What do you do?",
    o:["Nothing, since nobody was hurt","Handle the report and make sure it is recorded in the Violent Incident Log","Wait to see if the customer comes back","Tell them to handle it themselves next time"], a:1,
    f:"Every threat is an incident: it must be handled and recorded, even if nobody was hurt."},
@@ -202,11 +203,12 @@ const STEPS = [
   {t:"done"}
 ];
 
-const S = {i:0, name:"", email:"", loc:"", role:"", question:"", sig:"", ack:false, sel:null, solved:{}, sent:false};
+const S = {i:0, name:"", email:"", loc:[], role:"", question:"", sig:"", ack:false, sel:null, solved:{}, sent:false};
 const main = document.getElementById("main");
 const sheet = document.getElementById("sheet");
 const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
+function qCount(){ const n = STEPS.filter(s => s.t === "q"); const team = n.filter(s => !s.sup).length; return S.role ? visible().filter(s=>s.t==="q").length : (team === n.length ? team : team + "–" + n.length); }
 function visible(){ return STEPS.filter(s => !s.sup || S.role === "Supervisor or Manager"); }
 function cur(){ return visible()[S.i]; }
 
@@ -227,44 +229,45 @@ function render(){
   const tint = s.tint ? ` style="--tint:${s.tint}"` : "";
   let h = "";
   if (s.t === "welcome") {
-    h = `<div class="hero"><div class="logo" role="img" aria-label="Bobboi Natural Gelato" style="--logo:url(${LOGO})"></div><h1>Workplace Safety</h1><p>A quick training on how we keep each other safe at Bobboi.</p></div>
-    <div class="meta"><div><b>~15 min</b>paid time</div><div><b>${visible().filter(x=>x.t==="q").length}</b>questions</div><div><b>1×</b>a year</div></div>
-    <p class="small" style="text-align:center;margin-top:14px">Required by California law. Once you finish, 15 minutes are added to your timesheet.</p>
+    h = `<div class="hero"><div class="logo" role="img" aria-label="Bobboi Natural Gelato" style="--logo:url(${LOGO})"></div><h1>Workplace Violence Prevention</h1><p>A training on how we keep each other safe at Bobboi.</p></div>
+    <div class="meta"><div><b>~15 min</b>paid time</div><div><b>${qCount()}</b>questions</div><div><b>1×</b>a year</div></div>
+    <p class="small" style="text-align:center;margin-top:14px">Required by California law.</p>
     <div class="foot"><button class="btn" onclick="go(1)">Let's start</button></div>`;
   } else if (s.t === "about") {
     const locs = ["Mission Beach","La Jolla","Little Italy","Production"], roles = ["Team member","Supervisor or Manager"];
-    h = `<span class="kicker">👋 About you</span><h2>First, tell us who you are</h2>
+    h = `<span class="kicker">About you</span><h2>First, tell us who you are</h2>
     <label class="lb">Full name</label><input type="text" id="nm" value="${esc(S.name)}" placeholder="Your first and last name">
     <label class="lb">Email</label><input type="email" id="em" value="${esc(S.email)}" placeholder="you@email.com">
-    <label class="lb">Where do you work?</label><div class="chips">${locs.map(l=>`<button class="chip ${S.loc===l?"sel":""}" data-k="loc" data-v="${l}">${l}</button>`).join("")}</div>
+    <label class="lb">Where do you work?</label><p class="small" style="margin:-4px 0 10px">Select all that apply</p><div class="chips">${locs.map(l=>`<button class="chip ${S.loc.includes(l)?"sel":""}" data-k="loc" data-v="${l}">${l}</button>`).join("")}</div>
     <label class="lb">Your role</label><div class="chips">${roles.map(l=>`<button class="chip ${S.role===l?"sel":""}" data-k="role" data-v="${l}">${l}</button>`).join("")}</div>
     <div class="foot"><button class="btn" id="nx">Continue</button></div>`;
   } else if (s.t === "lesson") {
-    h = `<span class="kicker"${tint}>${s.icon} ${s.tag}</span><h2>${s.title}</h2>
-    <div class="lesson"${tint}>${s.intro?`<p>${s.intro}</p>`:""}<ul class="pts">${s.pts.map(p=>`<li><span class="dot">${p[0]}</span><span>${p[1]}</span></li>`).join("")}</ul>${s.outro?`<p style="margin:14px 0 0">${s.outro}</p>`:""}</div>
+    h = `<span class="kicker"${tint}>${s.tag}</span><h2>${s.title}</h2>
+    <div class="lesson"${tint}>${s.intro?`<p>${s.intro}</p>`:""}<ul class="pts">${s.pts.map(p=>`<li>${/^\d$/.test(p[0])?`<span class="dot">${p[0]}</span>`:`<span class="pip"></span>`}<span>${p[1]}</span></li>`).join("")}</ul>${s.outro?`<p style="margin:14px 0 0">${s.outro}</p>`:""}</div>
     <div class="foot"><button class="btn" onclick="go(1)">Got it</button></div>`;
   } else if (s.t === "q") {
     const solved = S.solved[s.q];
-    h = `<span class="kicker"${tint}>❓ Quick check</span><div class="q">${s.q}</div>
+    h = `<span class="kicker"${tint}>Question</span><div class="q">${s.q}</div>
     <div class="opts">${s.o.map((o,j)=>`<button class="opt ${solved&&j===s.a?"right":""} ${solved&&j!==s.a?"dim":""}" data-j="${j}"><span class="k">${"ABCD"[j]}</span><span>${o}</span></button>`).join("")}</div>
     <div class="foot"><button class="btn" id="chk" ${solved?"":"disabled"}>${solved?"Continue":"Check"}</button></div>`;
   } else if (s.t === "sign") {
-    h = `<span class="kicker">✍️ Almost done</span><h2>Any questions about the plan?</h2>
+    h = `<span class="kicker">Almost done</span><h2>Any questions about the plan?</h2>
     <textarea id="qa" placeholder="Optional. Simone will answer by email within 48 hours.">${esc(S.question)}</textarea>
     <label class="check"><input type="checkbox" id="ack" ${S.ack?"checked":""}><span>I have completed the Workplace Violence Prevention training. I know where to find the plan, how to report and what to do in an emergency.</span></label>
     <label class="lb">Type your full name as your signature</label><input type="text" id="sig" value="${esc(S.sig)}" placeholder="${esc(S.name)||"Full name"}">
     <div class="foot"><button class="btn" id="sub" disabled>Submit</button></div>`;
   } else if (s.t === "done") {
     h = `<div class="screen done" style="animation:none">
-      <span class="kicker">⏳ Finishing up</span><h2>Wrapping up your training</h2>
+      <span class="kicker">Finishing up</span><h2>Wrapping up your training</h2>
       <div class="tasks">
         <div class="task" id="t0">${ring()}<span>Saving your answers</span></div>
         <div class="task" id="t1">${ring()}<span>Recording your training</span></div>
-        <div class="task" id="t2">${ring()}<span>Adding 15 minutes to your timesheet</span></div>
+        <div class="task" id="t2">${ring()}<span>Notifying HR</span></div>
       </div>
       <div id="err" style="display:none;margin-top:18px"><p class="small" style="color:var(--red);margin:0 0 12px">We couldn't save your training. Check your connection and try again.</p><button class="btn" id="retry">Try again</button></div>
       <div class="final" id="fin"><h1>You're all set${S.name?", "+esc(S.name.split(" ")[0]):""}!</h1>
-      <p class="small" style="margin-top:10px">Thanks for keeping Bobboi safe. If you asked a question, you'll get an answer by email within 48 hours.</p></div>
+      <p class="small" style="margin-top:10px">15 minutes of paid training time will be added to your timesheet.</p>
+      <p class="small" style="margin-top:6px">Thanks for keeping Bobboi safe. If you asked a question, you'll get an answer by email within 48 hours.</p></div>
     </div>`;
   }
   main.innerHTML = s.t === "done" ? h : `<div class="screen">${h}</div>`;
@@ -272,14 +275,21 @@ function render(){
 }
 
 function ring(){ return `<span class="ring"><svg class="o" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="11"/></svg><span class="fill"></span><span class="tick"><svg viewBox="0 0 26 26" width="26" height="26"><path d="M8 13.5l3.3 3.2L18 10"/></svg></span></span>`; }
-function scoops(){ const c=["#FFFFFF","#FFF4B8","#FFFFFF","#FFDF5E","#FFFFFF"]; return `<div class="scoops">${[[-30,-30,120],[260,-20,90],[300,150,130],[-40,170,100],[150,230,70]].map((p,i)=>`<span style="left:${p[0]}px;top:${p[1]}px;width:${p[2]}px;height:${p[2]}px;background:${c[i]}"></span>`).join("")}</div>`; }
+function scoops(){ const c=["","#FFF4B8","#FFFFFF","#FFDF5E","#FFFFFF"]; return `<div class="scoops">${[[-30,-30,120],[260,-20,90],[300,150,130],[-40,170,100],[150,230,70]].map((p,i)=>`<span style="left:${p[0]}px;top:${p[1]}px;width:${p[2]}px;height:${p[2]}px;background:${c[i]}"></span>`).join("")}</div>`; }
 
 function wire(s){
   if (s.t === "about") {
-    const ok = () => document.getElementById("nx").disabled = !(S.name.trim() && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(S.email.trim()) && S.loc && S.role);
+    const ok = () => document.getElementById("nx").disabled = !(S.name.trim() && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(S.email.trim()) && S.loc.length && S.role);
     document.getElementById("nm").oninput = e => { S.name = e.target.value; ok(); };
     document.getElementById("em").oninput = e => { S.email = e.target.value; ok(); };
-    main.querySelectorAll(".chip").forEach(b => b.onclick = () => { S[b.dataset.k] = b.dataset.v; b.parentNode.querySelectorAll(".chip").forEach(x=>x.classList.toggle("sel", x===b)); ok(); });
+    main.querySelectorAll(".chip").forEach(b => b.onclick = () => {
+      if (b.dataset.k === "loc") { // piu' sedi possibili
+        const v = b.dataset.v, i = S.loc.indexOf(v);
+        if (i < 0) S.loc.push(v); else S.loc.splice(i, 1);
+        b.classList.toggle("sel", i < 0);
+      } else { S[b.dataset.k] = b.dataset.v; b.parentNode.querySelectorAll(".chip").forEach(x=>x.classList.toggle("sel", x===b)); }
+      ok();
+    });
     document.getElementById("nx").onclick = () => go(1); ok();
   }
   if (s.t === "q") {
@@ -322,7 +332,7 @@ function runTasks(){
     const started = Date.now(), minWait = 1200;
     const ok = () => { S.sent = true; setTimeout(finish, Math.max(0, minWait - (Date.now() - started))); };
     const fail = () => { el("t0").classList.remove("active"); el("err").style.display = ""; };
-    const data = {name:S.name, email:S.email, location:S.loc, role:S.role, question:S.question, signature:S.sig, ack:S.ack};
+    const data = {name:S.name, email:S.email, location:S.loc.join(", "), role:S.role, question:S.question, signature:S.sig, ack:S.ack};
     if (window.google && google.script && google.script.run) google.script.run.withSuccessHandler(ok).withFailureHandler(fail).submitTraining(data);
     else if (/^https?:$/.test(location.protocol))
       // Pagina su GitHub Pages: POST allo script senza cookie, cosi' il login Google del dipendente non conta.
@@ -339,7 +349,7 @@ function hideSheet(){ sheet.className = "sheet"; }
 function pick(a){ return a[Math.floor(Math.random()*a.length)]; }
 function burst(n){
   const c = document.createElement("div"); c.className = "confetti"; document.body.appendChild(c);
-  const col = ["#141414","#F6CF2C","#FFF4B8","#FAD4CF","#D8E6FA","#D3F0EC","#FFE3CC","#EBDDF7"];
+  const col = ["","#F6CF2C","#FFF4B8","#FAD4CF","#D8E6FA","#D3F0EC","#FFE3CC","#EBDDF7"];
   for (let i=0;i<n;i++){ const e=document.createElement("i"); e.style.left=Math.random()*100+"%"; e.style.background=col[i%col.length]; e.style.animationDuration=(1.4+Math.random()*1.4)+"s"; e.style.animationDelay=Math.random()*.3+"s"; c.appendChild(e); }
   setTimeout(()=>c.remove(), 3500);
 }
